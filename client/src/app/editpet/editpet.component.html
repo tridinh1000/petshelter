@@ -1,0 +1,16 @@
+<p>Edit this pet</p>
+<div *ngIf="state">
+  <p *ngIf="status != ''">{{ status }}</p>
+  <form (submit)="editPet()">
+    <!-- <p>{{ newAuthor | json}}</p> -->
+    Pet name:<br><input type="text" name="name" [(ngModel)]="pet.name"/><br>
+    Pet type:<br><input type="text" name="type" [(ngModel)]="pet.type"/><br>
+    Description<br><input type="text" name="description" [(ngModel)]="pet.description"/><br>
+    Skills:<br>
+    Skill 1:<input type="text" name="skill1" [(ngModel)]="pet.skill1"/><br>
+    Skill 2:<input type="text" name="skill2" [(ngModel)]="pet.skill2"/><br>
+    Skill 3:<input type="text" name="skill3" [(ngModel)]="pet.skill3"/>
+    <br><br><input type="submit" value="Edit pet">
+    <button [routerLink]="['/pets']">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<a style="margin-left:300px" [routerLink]='["/pets"]'>Home</a>
+<p> Details about {{ pet["name"]}}</p> 
+<div>
+  <!-- <table class="table table-condensed"> -->
+  <table>
+    <tr>
+      <td>
+        <h6>Pet Type:</h6>
+      </td>
+      <td>{{ pet["type"]}}</td>
+    </tr>
+    <tr>
+        <td>
+          <h6>Description:</h6>
+        </td>
+        <td>{{ pet["description"]}}</td>
+    </tr>
+    <tr>
+        <td>
+          <h6>Skills:</h6>
+        </td>
+        <td>{{ pet["skill1"]}}</td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>{{ pet["skill2"]}}</td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>{{ pet["skill3"]}}</td>
+    </tr>
+    <tr>
+        <td>
+          <h6>Likes:</h6>
+        </td>
+        <td>{{ pet["likes"]}}</td>
+    </tr>
+  </table>
+  <button id="btnLike" [disabled]="isDisabled" (click)="likePet()">Like</button>
+  <button (click)="deletePet()">Adopt this pet!</button>
+</div>

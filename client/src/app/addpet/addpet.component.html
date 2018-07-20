@@ -1,0 +1,17 @@
+<p>
+  Know of a pet needing a home?
+</p>
+<p *ngIf="status != ''">{{ status }}</p>
+<form (submit)="createPet()">
+  <!-- <p>{{ newAuthor | json}}</p> -->
+  Pet name:<br><input type="text" name="name" [(ngModel)]="newPet.name"/><br>
+  Pet type:<br><input type="text" name="type" [(ngModel)]="newPet.type"/><br>
+  Description<br><input type="text" name="description" [(ngModel)]="newPet.description"/><br>
+  Skills:<br>
+  Skill 1:<input type="text" name="skill1" [(ngModel)]="newPet.skill1"/><br>
+  Skill 2:<input type="text" name="skill2" [(ngModel)]="newPet.skill2"/><br>
+  Skill 3:<input type="text" name="skill3" [(ngModel)]="newPet.skill3"/>
+  <br><br><input type="submit" value="Add pet">
+  <button [routerLink]="['/pets']">Cancel</button>
+  
+</form>
